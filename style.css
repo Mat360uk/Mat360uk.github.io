@@ -1,41 +1,102 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 0px;
+    margin: 0;
+    font-family: "Nerko One", cursive;
+    background-color: #FDDE6C;
     font-size: 1.5vw;
 }
 
+header{
+    padding: 16px;
+    background-color: #FD8D49;
+    color: #ffffff;
+    text-align: center;
+    grid-area: header;
+}
+
 #logo {
-    margin: 0px;
+    color: #F43605;
     padding: 8px;
-    font-family: "Fredoka One", sans-serif;
-    width: 16%;
+    width: 20%;
     text-shadow: -1px -1px 0 #000, 
                  1px -1px 0 #000, 
                  -1px 1px 0 #000, 
                  1px 1px 0 #000;
+    text-align: center;
+    font-size: 3vw;
 }
 
-ul {
-    margin: 0px;
-}
-
-body > header {
-    background-color: orange;
+#searchbar{
+    background-color: #FD8D49;
     color: #ffffff;
-    display: flex;
-    height: 10vh;
-    align-items: center;
-    justify-content: space-around;
+    text-align: center;
+    grid-area: search;
 }
+
+#searchbar > form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#searchbar > form input[type="search"] {
+    padding: 10px;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+#searchbar > form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #F43605;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+#searchbar >form button:hover {
+    background-color: #F43605;
+}
+
 
 #nav-ul {
-    display: flex;
+    grid-area: headnav;
+    background-color: #FD8D49;
+}
 
+#nav-ul > ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    padding: 16px;
+    justify-content: space-around;
 }
 
 #nav-ul > li {
     padding: 8px;
-    margin: 16px;
+    margin: 20px;
+    background-color: #FD8D49;
+}
+
+.navbutton {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    /* border: 1px solid white; */
+    border-radius: 10%;
+    background-color: #F43605;
+}
+
+.basketbutton {
+    padding: 15px;
+    background-color: #F43605;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20%;
 }
 
 body > header > nav > ul {
@@ -43,55 +104,93 @@ body > header > nav > ul {
     text-decoration: none;
 }
 
-.navbutton {
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    border: 1px solid white;
-    border-radius: 10%;
+#menu {
+    padding: 32px;
+    background-color: #FD8D49;
+    grid-area: menu;
+    
 }
 
-body > main article {
-    width: 70%;
-    margin: auto;
-}
-
-#main-content {
+#menu > nav{
+    margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+    
 }
 
-#main-content > div {
-    width: 70%;
-}
-
-form {
+#pagetitle {
+    padding: 16px;
     text-align: center;
+    grid-area: title;
+    background-color: #FDDE6C;
 }
 
-h2 {
+#item1 {
+    padding: 32px;
     text-align: center;
+    grid-area: main1;
+    background-color: #FDDE6C;
 }
 
-body > footer {
-    background-color: orange;
-    display: flex;
+#item2 {
+    padding: 32px;
+    text-align: center;
+    grid-area: main2;
+    background-color: #FDDE6C;
 }
 
-img {
-    border-radius: 50%;
+#item3 {
+    padding: 32px;
+    text-align: center;
+    grid-area: main3;
+    background-color: #FDDE6C;
 }
 
-#footer-ul {
-    display: flex;
-    list-style: none;
+#item4 {
+    padding: 32px;
+    text-align: center;
+    grid-area: main4;
+    background-color: #FDDE6C;
 }
 
-#footer-ul > div > li {
-    margin-left: 12px;
+#item5 {
+    padding: 32px;
+    text-align: center;
+    grid-area: main5;
+    background-color: #FDDE6C;
 }
 
-#footer-ul > div > li > a {
+#item6 {
+    padding: 32px;
+    text-align: center;
+    grid-area: main6;
+    background-color: #FDDE6C;
+}
+
+.price {
+    font-weight: bold;
+}
+
+footer {
+    padding: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #FD8D49;
     color: white;
-    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    grid-area: footer;
 }
+
+#grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header search search headnav"
+    "menu title title title"
+    "menu main1 main2 main3"
+    "menu main4 main5 main6"
+    "footer footer footer footer"
+    ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
